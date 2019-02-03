@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pizza Store</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Epic Pizza</h1>
+      <p>The best pizza you can ever imaging...</p>
+    </div>
+    <div class="container">
+      <form id="pizza-form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="toppings">
+              <p class="choose">Please choose your toppings:</p>
+              <input type="checkbox" name="topping" value="cheese">Cheese<br>
+              <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+              <input type="checkbox" name="topping" value="olives">Black Olives<br>
+              <input type="checkbox" name="topping" value="mushroom">Mushrooms<br>
+              <input type="checkbox" name="topping" value="bacon">Bacon<br>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p class="choose">Please choose pizza size:</p>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Small" checked>
+                Small
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Medium">
+                Medium
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Family">
+                Family
+              </label>
+            </div>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-info" type="submit" id="order">Order!</button>
+        <br><br>
+      </form>
+      <div class="order-info">
+        <hr>
+        <p id="total"></p>
+      </div>
+    </div>
+  </body>
+</html>
