@@ -13,7 +13,7 @@ _Final project link: (https://pzanchuk.github.io/Order-pizza/)_
 
 | Behavior - Plain English | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **1. Program accepts user's input and shows total amount of money** | User input: "Cheese", "Medium" | Output: "Your total cost is:
+| **1. Program accepts user's input and shows total amount of money spent per 1 pizza** | User input: "Cheese", "Medium" | Output: "Your total cost is:
 $17.50"|
 
 
@@ -30,7 +30,8 @@ A folder named Order-pizza will be created in your current directory_
 
 ## Known Bugs
 
-_Pizzas are being added to (orders = []), but (this.total = pizza.totalCost()) does not assign Pizza's full price to be used to calculate the whole amount of money per order_
+_Further Exploration Content:
+Pizzas are being added to (orders = []), but (this.total = pizza.totalCost()) does not assign Pizza's full price to be used to calculate the whole amount of money per order_
 
 ## Support and contact details
 
