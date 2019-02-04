@@ -6,7 +6,6 @@ var olivePrice = 1.60;
 
 var pizzaIdsetter = 0;
 
-
 function TotalOrder(){
   this.orders = []
 }
@@ -14,23 +13,18 @@ function TotalOrder(){
 TotalOrder.prototype.addOrder = function(pizza){
   pizza.id = this.assignId();
   this.orders.push(pizza);
+  this.total = pizza.totalCost();
 }
 
-TotalOrder.prototype.assignId = function() {
+TotalOrder.prototype.assignId = function(){
   pizzaIdsetter+=1;
   return pizzaIdsetter;
-}
-
-TotalOrder.prototype.finalCost = function(pizza) {
-  var price = 0;
-
 }
 
 function Pizza(size, price){
   this.toppings = [],
   this.size = size,
   this.price = price
-
 }
 
 function Topping(name, price){
@@ -45,7 +39,7 @@ Pizza.prototype.addTopping = function(topping){
 
 Pizza.prototype.totalCost = function(){
   var totalCost = 0;
-  for (var i = 0; i < this.toppings.length; i++) {
+  for (var i = 0; i < this.toppings.length; i++){
     totalCost+=this.toppings[i].price;
   }
   return this.price + totalCost;
@@ -54,7 +48,7 @@ Pizza.prototype.totalCost = function(){
 var myOrder = new TotalOrder();
 
 $(document).ready(function() {
-  $("#pizza-form").submit(function(event) {
+  $("#pizza-form").submit(function(event){
     event.preventDefault();
       var size = $("input:radio[name=size]:checked").val();
 
@@ -76,7 +70,8 @@ $(document).ready(function() {
 
       var pizza = new Pizza(size, price);
       myOrder.addOrder(pizza);
-      for (var i = 0; i < toppingToArray.length; i++) {
+
+      for (var i = 0; i < toppingToArray.length; i++){
         if(toppingToArray[i] === "cheese"){
           var topping = new Topping("Cheese", cheesePrice)
           pizza.addTopping(topping);
@@ -95,9 +90,7 @@ $(document).ready(function() {
         }
       }
 
-        console.log(myOrder);
     $(".order-info").show();
     $("#total").html("Your total cost is:<br>$"+ pizza.totalCost().toFixed(2));
-
   });
 });
