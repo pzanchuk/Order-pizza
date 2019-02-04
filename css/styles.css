@@ -1,0 +1,41 @@
+.container{
+  background-image: url(../img/2.jpg);
+  width: 40%;
+  border-radius: 8px;
+}
+
+.header{
+  color: white;
+  height: 341px;
+  border-radius: 8px;
+  background-image: url(../img/1.jpg);
+  background-size: 100% 100%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.header h1 {
+  padding-top: 10%;
+  padding-left: 50%;
+}
+
+.header p{
+  padding-left: 50%;
+}
+
+hr{
+  border: 1px solid black ;
+}
+
+.choose{
+  font-weight: bold;
+}
+
+.order-info{
+  background-image: url(../img/2.jpg);
+  display: none;
+  border-radius: 8px;
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+}
