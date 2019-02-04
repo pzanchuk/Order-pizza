@@ -30,7 +30,7 @@ A folder named Order-pizza will be created in your current directory_
 
 ## Known Bugs
 
-_No Known bugs_
+_Pizzas are being added to (orders = []), but (this.total = pizza.totalCost()) does not assign Pizza's full price to be used to calculate the whole amount of money per order_
 
 ## Support and contact details
 
